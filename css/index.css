@@ -1,0 +1,134 @@
+html, body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+#main-content{
+    position: relative;
+    top: 100px;
+    height: calc(100% - 100px);
+    display: flex;
+}
+
+/* BEGIN SIDEBAR */
+
+#sidebar-container{
+    width: var(--sidebar-width);
+    height: 100%;
+    background-color: rgb(31, 33, 35);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    border-top: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #2998e6, #743ad5);
+    border-width: 3px;
+
+    transition: width 0.5s;
+}
+
+#sidebar-container.collapsed{
+    width: 60px;
+}
+
+
+#show-hide-arrow{
+    display: block;
+    justify-content: left;
+    align-content: left;
+    color: white;
+
+    margin-left: auto;
+    height: 50px;
+    font-size: 2em;
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+.collapsed #arrow-icon{
+    transform: rotate(180deg);
+}
+
+
+#arrow-container{
+    display: flex;
+    width: 100%;
+}
+
+#arrow-icon{
+    width: 40px;
+    height: 40px;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+#sidebar-content{
+    width: var(--sidebar-width);
+    padding: 2em;
+    flex-shrink: 1;
+    flex-grow: 1;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#sidebar-content::-webkit-scrollbar {
+    display: none;
+}
+
+#sidebar-content.collapsed{
+    transform: translate(-100%, 0);
+    opacity: 0;
+}
+
+#slider-container{
+    width: 100%;
+    margin: 2em 0;
+}
+
+#range-slider{
+    width: 100%;
+}
+
+#range-indicator{
+    font-size: 1.5em;
+}
+
+
+.result-container{
+    margin: 0;
+ 
+}
+
+#cards-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: visible;
+    background-color: rgb(31, 33, 35);
+}
+  
+
+/*END SIDEBAR*/
+
+
+
+/* START MAP */
+
+#map-container{
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+}
+
+#mapframe{
+    flex-grow: 1;
+}
+
+/* END MAP */
