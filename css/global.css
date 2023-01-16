@@ -58,7 +58,7 @@ body{
 
 .navlogo{
 
-    background-image: url("/images/kar.svg");
+    background-image: url("../images/kar.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -72,7 +72,7 @@ body{
 }
 
 .navi:hover .navlogo{
-    background-image: url("/images/kar_hover.svg");
+    background-image: url("../images/kar_hover.svg");
 }
 
 .navi{
@@ -329,7 +329,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 1em;
     box-sizing: border-box;
     margin: auto 0.5em;
-    background-image: url("/images/telephone.svg");
+    background-image: url("../images/telephone.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -353,7 +353,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 1em;
     box-sizing: border-box;
     margin: 0px 0.5em 0px 0.5em;
-    background-image: url("/images/person.svg");
+    background-image: url("../images/person.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
