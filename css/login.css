@@ -5,9 +5,6 @@
 }
 
 #tab-container{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: stretch; */
     width: calc(100%);
     height: calc(100%);
     padding: 2em min(5vw, 3em);
@@ -66,10 +63,6 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    /* border: 1px rgba(135, 134, 134, 0.375);
-    border-top-style: solid;
-    border-style: solid;
-    border-bottom-style: solid; */
     opacity: 0;
     transform: translate(0, -100px);
     transition: opacity 1s ease, transform 1s ease;
@@ -99,7 +92,6 @@
 #register-form{
     flex-direction: row;
     flex-wrap: wrap;
-    /* column-gap: 10px; */
 }
 
 .inputgroup{

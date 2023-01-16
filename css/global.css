@@ -2,7 +2,6 @@
 
 html,
 body{
-    /* display:flex; */
     position: relative;
     margin: 0px;
     padding: 0px;
@@ -233,8 +232,6 @@ input[type=password]:focus,
 input[type=tel]:focus,
 input[type=email]:focus,
 input[type=text]:focus {
-    /* border-color: rgba(135, 134, 134, 1); */
-    /* border-image: linear-gradient(to right, #2998e6, #743ad5); */
     border-color: #2998e6;
     outline: none;
 }
@@ -275,7 +272,6 @@ input[data-autocompleted] {
 
 input[type=range]{
     appearance: none;
-    /* background: #303336; */
     background-image: linear-gradient(to right, #2997e6, #733ad5);
     border-radius: 100vh;
     outline: none;
@@ -287,9 +283,7 @@ input[type=range]::-webkit-slider-thumb {
     appearance: none;
     width: 2em;
     height: 2em;
-    /* background-color: #348AE3; */
     background-color: white;
-    /* filter: drop-shadow(10px,0px,0px,black); */
     cursor: pointer;
     border-radius: 100%;
     border: solid 3px #1F2123;
