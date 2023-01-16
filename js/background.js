@@ -85,15 +85,17 @@ function runBackground(){
   function animate() {
     //ctx.fillStyle = "#1F2123";
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let pointsUpdated = [];
     points.forEach(dot => {
       dot.update();
-      points.forEach(dot2 => {
+      pointsUpdated.forEach(dot2 => {
         var dist = dot.distance(dot2);
         if(dist < edgeDist){
           o = (1-(dist / edgeDist))**2;
           connectDot(dot, dot2, o);
         }
       });
+      pointsUpdated.push(dot);
     });
     points.forEach(dot => {
       dot.draw();
