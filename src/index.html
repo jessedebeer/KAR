@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f2123">
+    <link rel="icon" href="./images/kar.svg"/>
+    <link rel="stylesheet" href="./css/global.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/tripcard.css"/>
+    <script src="./js/search.js"></script>
+    <title>KAR | CarPooling</title>
+</head>
+<body>
+
+<header>
+    <div id="navbar-container">
+        <ul id="navbar">
+            <li class="navi"><a href="./" class="navlogo"></a></li>
+        </ul>
+        <a id="header-button" href="./login.html">
+            <h2>Login</h2>
+        </a>
+    </div>
+</header>
+
+
+<div id="main-content">
+    <div id="sidebar-container">
+        <div id="arrow-container">
+            <a id="show-hide-arrow" onclick="toggleNav()">
+                <img id="arrow-icon" src="./images/caret-left-fill.svg"/>
+            </a>
+        </div>
+        <div id="sidebar-content">
+            <h2>Search Rides</h2>
+            <div id="slider-container">
+                <h4>Range:  <span id="range-indicator">10</span> km</h4>
+                <input type="range" min="5" max="100" value="10" step="5" class="slider" id="range-slider">
+                <script>
+                    var rangeslider = document.getElementById("range-slider");
+                    var rangeindicator = document.getElementById("range-indicator");
+                    rangeslider.addEventListener("change", function() {
+                        rangeindicator.innerHTML = rangeslider.value;
+                    });
+                    rangeslider.addEventListener("input", function() {
+                        rangeindicator.innerHTML = rangeslider.value;
+                    });
+                </script>
+            </div>
+            <form method="get" action="https://www.google.com/maps" target="mapframe">
+                <input name="saddr" type="text" id="saddr" placeholder="Starting location">
+                <input name="output" type="hidden" value="embed">
+                <!-- <input name="f" type="hidden" value="d"> -->
+                <input name="z" type="hidden" value="10">
+                <input name="dirflg" type="hidden" value="d">
+                <input name="daddr" type="text" id="daddr" placeholder= "Destination" value="">
+                <input type="submit" value="Submit">
+            </form>
+            <hr>
+            <div class="result-container">
+                <h3>Results: </h3>
+                <div id="cards-container">
+                    <!-- CARDS WILL BE DYNAMICALLY PLACED HERE -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map-container">
+        <iframe id="mapframe" name="mapframe" src="https://www.google.com/maps?z=9&amp;f=d&amp;directionsmode=driving&amp;output=embed&amp;ll=52.2015,4.9424"></iframe>
+    </div>
+</div>
+<script>
+    function toggleNav(){
+        document.getElementById('sidebar-container').classList.toggle('collapsed');
+        document.getElementById('sidebar-content').classList.toggle('collapsed');
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        addCard("test");
+    }, false);
+</script>
+
+</body>
+</html>
