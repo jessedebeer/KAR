@@ -6,28 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1f2123">
-    <link rel="icon" href="/images/kar.svg"/>
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/background.css" />
-    <link rel="stylesheet" href="/css/login.css" />
-    <script src="/js/background.js"></script>
+    <link rel="icon" href="./images/kar.svg"/>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/background.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/background.js"></script>
     <title>KAR | Login</title>
 </head>
 
 <body>
-
     <header>
     <div id="navbar-container">
         <ul id="navbar">
-            <li class="navi"><a href="/" class="navlogo"></a></li>
-            
+            <li class="navi"><a href="./" class="navlogo"></a></li>
         </ul>
-        
-        
-        <a id="header-button" href="/login">
+        <a id="header-button" href="./login">
             <h2>Login</h2>
         </a>
-        
     </div>
 </header>
 
@@ -42,7 +37,7 @@
                     </div>
                     <div class="active-tab-container">
                         <div id="tab-login" class="tab-panel active">
-                            <form id="login-form" class="form" action="/auth/login" method="POST">
+                            <form id="login-form" class="form" action="./auth/login" method="POST">
                                 <div>
                                     <label for="username">Username</label>
                                     <input type="text" name="username" id="username">
@@ -55,7 +50,7 @@
                             </form>
                         </div>
                         <div id="tab-register" class="tab-panel">
-                            <form id="register-form" class="form" action="/auth/register" method="POST">
+                            <form id="register-form" class="form" action="./auth/register" method="POST">
                                 <div class="inputgroup">
                                     <label for="username">Username</label>
                                     <input type="text" name="username" id="username">
